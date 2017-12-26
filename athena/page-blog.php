@@ -4,35 +4,39 @@
  */
 get_header(); ?>
 
-<div id="primary" class="content-area">
-            <main id="main" class="site-main" role="main">
+    <div id="primary" class="content-area">
+        <main id="main" class="site-main athena-page" role="main">
 
+            <div class="page-blog-con">
+                <?php $numno = 1; ?>
                 <?php
- $temp = $wp_query;
- $wp_query = null;
- $wp_query = new WP_Query();
- $wp_query->query('post_type=syoukai' . '&paged=' . $paged . '&posts_per_page=10');
- ?>
- 
- <?php while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
- 
- <?php get_template_part('template-parts/content', 'page'); ?>
+	$temp = $wp_query;
+	$wp_query = null;
+	$wp_query = new WP_Query();
+	$wp_query->query('post_type=post_member' . '&paged=' . $paged . '&posts_per_page=12');
+	?>
+                    <?php while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
+                    <div class="page-member-box">
+                        <div class="member-text mclick<?php echo $numno; ?>" style="background-image: url(<?php echo wp_get_attachment_url( get_post_thumbnail_id() ); ?>);">
+                            <div class="member-name">
+                                <?php the_title(); ?>
+                            </div>
+                        </div>
 
-            <?php
-            // If comments are open or we have at least one comment, load up the comment template.
-            if (comments_open() || get_comments_number()) :
-                comments_template();
-            endif;
-            ?>
+                        <script type="text/javascript">
+                            $(function() {
+                                $(".mclick<?php echo $numno; ?>").on("click", function() {
+                                    $('.member-content<?php echo $numno; ?>').next().slideToggle();
+                                    $('.member-content<?php echo $numno; ?>').toggleClass("show");
+                                });
+                            });
 
-        <?php endwhile; // End of the loop. ?>
+                        </script>
 
-    </main><!-- #main -->
-
-
-    
-    
-</div><!-- #primary -->
-
-
-<?php get_footer(); ?>
+                        <div class="member-content<?php echo $numno; ?>" style="display: none;">
+                            <?php $numno = $numno + 1; ?>
+                            <?php the_content(); ?>
+                        </div>
+                    </div>
+                    <? endwhile; ?>
+            </div>
