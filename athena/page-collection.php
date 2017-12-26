@@ -44,6 +44,10 @@ get_header(); ?>
             </div>
         <?php endwhile; // End of the loop. ?>
     </div>
+    <div class="athena-pagination">
+        <?php echo paginate_links(); ?>
+    </div>
+</div>
 </div>
 
 </main><!-- #main -->
@@ -61,8 +65,12 @@ get_header(); ?>
     border: 1px solid #00000040;
     padding: 10px;
     margin-bottom: 30px;
+    box-shadow: 1px 1px 1px;
 }
 .collection-box {
     padding: 15px;
+}
+.collection-item-textbox h3,.collection-item-textbox p {
+    color: #505656;
 }
 </style>

@@ -14,7 +14,9 @@
 
 <footer id="colophon" class="site-footer" role="contentinfo">
     
-    <?php do_action( 'athena_footer' ); ?>
+ <div class="footer-wrapper">
+ 	<p>Copy right LiLa 2017</p>
+ </div>
     
 </footer><!-- #colophon -->
 </div><!-- #page -->
