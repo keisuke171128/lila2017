@@ -744,7 +744,8 @@ input[type="submit"]{
     margin-top: 150px;
     text-align: center;
     color: #fff;
-    font-size: 46px;
+    font-size: 30px;
+    padding: 0 10px;
 }
 
 /*-- 8. Blog --*/

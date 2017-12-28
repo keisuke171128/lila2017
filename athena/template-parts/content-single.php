@@ -9,7 +9,7 @@
 ?>
 
 <?php if (get_post_thumbnail_id($post->ID)) : ?>
-    <div id="athena-page-jumbotron" class="parallax-window" data-parallax="scroll" data-image-src="<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)) ?>" >
+    <div id="athena-page-jumbotron" class="parallax-window" data-parallax="scroll" data-image-src="<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)) ?>" style="background: rgba(18, 18, 19, 0.37) url(http://webcreatorbox.com/sample/images/beach-footprint.jpg) no-repeat;background-blend-mode: overlay;">
 
         <header class="entry-header">
             <?php the_title('<h1 class="entry-title">', '</h1>'); ?>

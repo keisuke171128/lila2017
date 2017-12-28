@@ -1,3 +1,15 @@
+article .entry-content p {
+    line-height: 27px;
+}
+article .entry-content h1,article .entry-content h2,article .entry-content h3,article .entry-content h4,article .entry-content h5,article .entry-content h6 {
+    border-left: 7px solid #04ab9e;
+    padding: 10px;
+    background-color: #0000000a;
+    line-height: 30px;
+}
+#primary {
+    margin-top: 50px;
+}
 .footer-wrapper {
     height: 100px;
     width: 100%;
@@ -422,7 +434,7 @@ input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
     /*	border-color: #aaa #bbb #bbb;
-	box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);*/
+    box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);*/
 }
 
 input[type="text"],
