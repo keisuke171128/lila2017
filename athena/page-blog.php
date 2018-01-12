@@ -8,6 +8,9 @@ get_header(); ?>
     <main id="main" class="site-main athena-page" role="main">
 
         <div class="blog-wrapper">
+            <div class="collection-title page-title">
+                <h1>Blog</h1>
+            </div>  
             <?php
             $temp = $wp_query;
             $wp_query = null;

@@ -31,6 +31,10 @@ get_header();
 
                     <?php $front = get_option('show_on_front'); ?>
 
+                    <div class="index-blog-title">
+                        <h1>新着ブログ</h1>
+                    </div>
+
                     <?php echo $front == 'posts' ? '<div class="athena-blog-content">' : ''; ?>
 
                     <?php while (have_posts()) : the_post(); ?>

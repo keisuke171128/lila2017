@@ -8,6 +8,9 @@ get_header(); ?>
     <main id="main" class="site-main athena-page" role="main">
 
         <div class="member-wrapper">
+            <div class="member-title page-title">
+                <h1>LiLaを運営するメンバーです</h1>
+            </div>  
             <div class="page">
                 <?php
                 $temp = $wp_query;

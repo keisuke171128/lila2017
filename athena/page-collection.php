@@ -8,6 +8,9 @@ get_header(); ?>
     <main id="main" class="site-main" role="main">
 
         <div class="collection-wrapper">
+            <div class="collection-title page-title">
+                <h1>これまで作ってきた作品たち</h1>
+            </div>  
             <div class="collection-box">
                 <?php
                 $temp = $wp_query;

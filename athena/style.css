@@ -1,7 +1,10 @@
+.page-title {
+    padding: 20px;
+}
 article .entry-content p {
     line-height: 27px;
 }
-article .entry-content h1,article .entry-content h2,article .entry-content h3,article .entry-content h4,article .entry-content h5,article .entry-content h6 {
+article .entry-content h1,article .entry-content h2,article .entry-content h3,article .entry-content h4,article .entry-content h5,article .entry-content h6,.page-title h1 {
     border-left: 7px solid #04ab9e;
     padding: 10px;
     background-color: #0000000a;

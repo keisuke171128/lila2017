@@ -1,8 +1,6 @@
-/* 
-    Created on : 24-Sep-2015, 11:46:32 PM
-    Author     : bilal
-*/
-
+.author,.byline,.meta-detaili:nth-child(3) {
+    display: none;
+}
 a,a:visited,a:hover, a:focus,a:visited:hover{
     text-decoration: none;
 }

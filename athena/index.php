@@ -17,6 +17,11 @@ get_header();
 
             <?php get_sidebar('left'); ?>
 
+
+            <div class="index-blog-title">
+                <h1>新着ブログ</h1>
+            </div>
+
             <div class="athena-blog-content col-sm-<?php echo athena_main_width(); ?>">
                 <?php if (have_posts()) : ?>
 
