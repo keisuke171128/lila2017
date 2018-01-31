@@ -1,3 +1,112 @@
+.site-title a:visited {
+    font-family: Klee;
+    color: white
+}
+.index-text-eng {
+    font-size: 25px;
+}
+index-text-jpn {
+    font-size: 18px;
+}
+.index-top-text p {
+    text-align: center;
+    padding: 30px;
+    line-height: 60px;
+    color: #e4e4e4;
+    position: relative;
+}
+.index-top-content {
+    background: url(http://lila.wp.xdomain.jp/wp-content/uploads/2018/01/aa867481d9800634bcf0d158e06aa29d.png) no-repeat center;
+    background-size: cover;
+    position: relative;
+    height:350px;
+}
+.index-top-content::before{
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: ' ';
+}
+
+.index-content-wrap {
+    margin: 50px 0;
+}
+.title-box {
+    text-align: center;
+}
+.title-box h1 {
+    font-family: 'Roboto Condensed', sans-serif;
+    margin-top: 0 !important;
+}
+.title-box h4 {
+    margin: 0 !important;
+}
+.index-title-border {
+    border-bottom: 5px solid black;
+    border-radius: 50px;
+    width: 30%;
+    margin: 0 auto;
+}
+.whoareare-text {
+    padding: 20px 40px;
+    font-size: 20px;
+}
+.whoareare-text p {
+    font-size: 17px;
+    line-height: 30px;
+}
+.link-box {
+    width: 100%;
+}
+.link-item {
+    padding: 10px 0;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+.link-item a {
+    color: white !important;
+    font-size: 20px;
+}
+.aboutus-link {
+    width: 50%;
+    background-color: white;
+    border: 1px solid gray;
+}
+.aboutus-link a {
+    color: gray !important;
+}
+.future-box {
+    height: 200px;
+    width: 200px;
+    background-color: black;
+    border-radius: 50%;
+    margin: 40px auto 0 auto;
+}
+.future-box-text {
+    text-align: center;
+}
+.future-box-text h2 {
+    margin: 10px !important;
+}
+.blog-box {
+    width: 80%;
+    height: 300px;
+    margin: 40px auto;
+    background-color: black;
+}
+.clients-text {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 50% 50%;
+    text-align: center;
+}
+
 .page-title {
     padding: 20px;
 }

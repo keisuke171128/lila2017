@@ -90,5 +90,6 @@ input[type="submit"],
 }
 
 #athena-overlay-trigger{
+    display: none;
     border-color: transparent transparent #36B3A8 transparent;
 }
