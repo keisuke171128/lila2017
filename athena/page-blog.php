@@ -10,7 +10,14 @@ get_header(); ?>
         <div class="blog-wrapper">
             <div class="collection-title page-title">
                 <h1>Blog</h1>
-            </div>  
+            </div>
+            <div class="content-explain">
+                <p>
+                    現役の大学生向けに、学生生活でためになる情報を発信しています。<br>
+                    サークル、バイト、ゼミ、就活...etc<br>
+                    学生生活のあらゆる場面で使える知識をちょいだし<br>
+                </p>
+            </div>
             <?php
             $temp = $wp_query;
             $wp_query = null;
@@ -94,13 +101,5 @@ get_header(); ?>
 <?php get_footer(); ?>
 
 <style type="text/css">
-.blog-wrapper {
-    padding: 0 15px;
-}
-.blog-wrapper article {
-    padding: 10px;
-    border: 1px solid #80808061;
-    box-shadow: 1px 1px 3px #BFBFBF;
-    border-radius: 2px;
-}
+
 </style>

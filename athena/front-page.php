@@ -21,12 +21,11 @@ get_header();
                 <div class="index-top-text">
                     <p>
                         <span class="index-text-eng">
-                            A wise man will make more opportunities than he finds.
+                            Curiosity has its own reason for existing.
                         </span>
                         <br>
                         <span class="index-text-jpn">
-                            賢者はチャンスを見つけるよりも、<br>
-                            みずからチャンスを創りだす。
+                            好奇心は理由があって存在している
                         </span>
                     </p>
                 </div>
@@ -43,7 +42,7 @@ get_header();
                         ぼくたちについて
                     </h3>
                     <h1>
-                        Who we are
+                        OUR MISSION
                     </h1>
                     <p class="index-title-border"></p>
                 </div>
@@ -72,25 +71,37 @@ get_header();
                     <p class="index-title-border"></p>
                 </div>
                 <div class="item-future blog-text">
-                    <div class="future-box"></div>
-                    <div class="future-box-text">
-                        <h2>
-                            web design
-                        </h2>
+                    <div>
+                        <a href="http://lila.wp.xdomain.jp/futures/webdesign" class="future-a">
+                            <div class="future-box webdesign-img"></div>
+                            <div class="future-box-text">
+                                <h2>
+                                    webサイト制作
+                                </h2>
+                            </div>
+                        </a>
                     </div>
 
-                    <div class="future-box"></div>
-                    <div class="future-box-text">
-                        <h2>
-                            Promotion
-                        </h2>
+                    <div>
+                        <a href="http://lila.wp.xdomain.jp/futures/promotion-support" class="future-a">
+                            <div class="future-box promo-img"></div>
+                            <div class="future-box-text">
+                                <h2>
+                                    Promotionサポート
+                                </h2>
+                            </div>
+                        </a>
                     </div>
 
-                    <div class="future-box"></div>
-                    <div class="future-box-text">
-                        <h2>
-                            web application
-                        </h2>
+                    <div>
+                        <a href="http://lila.wp.xdomain.jp/futures/blog" class="future-a">
+                            <div class="future-box contents-img"></div>
+                            <div class="future-box-text">
+                                <h2>
+                                    現役大学生向けコンテンツ
+                                </h2>
+                            </div>
+                        </a>
                     </div>
                 </div>
                 <div class="item-future blog-linkbox">
@@ -104,7 +115,7 @@ get_header();
                 <div class="item-blog blog-title title-box">
                     <h4>
                         コンテンツ
-                    </h3>
+                    </h4>
                     <h1>
                         BLOG
                     </h1>
@@ -112,36 +123,35 @@ get_header();
                 </div>
 
                 <!-- BLOG -->
-                <div class="homepage-page-content col-sm-<?php echo athena_main_width(); ?>">
-                    <?php if (have_posts()) : ?>
-                        <?php if (is_home() && !is_front_page()) : ?>
-                            <header>
-                                <h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-                            </header>
-                        <?php endif; ?>
-                        <?php $front = get_option('show_on_front'); ?>
-                        <div class="index-blog-title">
-                            <h1>新着ブログ</h1>
+                <div class="index-blog-wrapper">
+                    <div class="homepage-page-content col-sm-<?php echo athena_main_width(); ?>">
+                        <?php if (have_posts()) : ?>
+                            <?php if (is_home() && !is_front_page()) : ?>
+                                <header>
+                                    <h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+                                </header>
+                            <?php endif; ?>
+                            <?php $front = get_option('show_on_front'); ?>
+                            <?php echo $front == 'posts' ? '<div class="athena-blog-content">' : ''; ?>
+                                <?php while (have_posts()) : the_post(); ?>
+                                    <?php
+                                    if ('posts' == get_option('show_on_front')) :
+                                        get_template_part('template-parts/content-blog', get_post_format());
+                                    else:
+                                        get_template_part('template-parts/content-page-home', get_post_format());
+                                    endif;
+                                    ?>
+                                <?php endwhile; ?>
+                                <?php echo $front == 'posts' ? '</div>' : ''; ?>
+                                <div class="athena-pagination">
+                                    <?php echo paginate_links(); ?>
+                                </div>
+                            <?php else : ?>
+                                <?php get_template_part('template-parts/content', 'none'); ?>
+                            <?php endif; ?>
                         </div>
-                        <?php echo $front == 'posts' ? '<div class="athena-blog-content">' : ''; ?>
-                            <?php while (have_posts()) : the_post(); ?>
-                                <?php
-                                if ('posts' == get_option('show_on_front')) :
-                                    get_template_part('template-parts/content-blog', get_post_format());
-                                else:
-                                    get_template_part('template-parts/content-page-home', get_post_format());
-                                endif;
-                                ?>
-                            <?php endwhile; ?>
-                            <?php echo $front == 'posts' ? '</div>' : ''; ?>
-                            <div class="athena-pagination">
-                                <?php echo paginate_links(); ?>
-                            </div>
-                        <?php else : ?>
-                            <?php get_template_part('template-parts/content', 'none'); ?>
-                        <?php endif; ?>
+                        <?php get_sidebar(); ?>
                     </div>
-                    <?php get_sidebar(); ?>
                 </div>
                 <!-- BLOG -->
 
@@ -166,9 +176,11 @@ get_header();
 
             <div class="content-5 con-portfolio index-content-wrap">
                 <div class="item-portfolio portfolio-text link-box">
-                    <div class="portfolio-link link-item">
-                        <a href="http://lila.wp.xdomain.jp/portfolio">PORTFOLIO</a>
-                    </div>
+                    <a href="http://lila.wp.xdomain.jp/portfolio">
+                        <div class="portfolio-link link-item">
+                            PORTFOLIO
+                        </div>
+                    </a>
                 </div>
             </div>
 

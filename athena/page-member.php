@@ -9,7 +9,7 @@ get_header(); ?>
 
         <div class="member-wrapper">
             <div class="member-title page-title">
-                <h1>LiLaを運営するメンバーです</h1>
+                <h1>MEMBER</h1>
             </div>  
             <div class="page">
                 <?php

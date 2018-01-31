@@ -18,6 +18,12 @@ get_header(); ?>
 
             <?php get_sidebar('left'); ?>
 
+            <div class="blog-title page-title">
+                <h1>
+                    <? the_archive_title(); ?>
+                </h1>
+            </div>  
+
             <div class="athena-blog-content col-sm-<?php echo athena_main_width(); ?>">
                 <?php if (have_posts()) : ?>
 

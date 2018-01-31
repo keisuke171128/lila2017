@@ -5,11 +5,11 @@
 get_header(); ?>
 
 <div id="primary" class="content-area">
-    <main id="main" class="site-main" role="main">
+    <main id="main" class="site-main athena-page" role="main">
 
         <div class="collection-wrapper">
             <div class="collection-title page-title">
-                <h1>これまで作ってきた作品たち</h1>
+                <h1>PORTFOLIO</h1>
             </div>  
             <div class="collection-box">
                 <?php
@@ -20,34 +20,36 @@ get_header(); ?>
                 ?>
 
                 <?php while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
-                   <div class="collection-item">
+                 <div class="collection-item">
                     <?  
                     $txt = get_field('collection_url');
                     if($txt){ ?><a href="<? echo $txt; ?>" target="_blank">
                         <? } ?>
+                        <div class="collection-item-imgbox">
+                            <? 
+                            $img = get_field('collection_image');
+                            $imgurl = wp_get_attachment_image_src($img, 'full');
+                            if($imgurl){ ?><img src="<? echo $imgurl[0]; ?>" alt="">
+                            <? } ?>
+                        </div>
                         <div class="collection-item-textbox">
-                            <h3>
-                                <?php the_title(); ?>
-                            </h3>
-                            <p>
-                               <?  
-                               $txt = get_field('collection-univ-name');
-                               if($txt){ ?><? echo $txt; ?>
-                               <? } ?>
-                           </p>
-                       </div>
-                       <div class="collection-item-imgbox">
-                        <? 
-                        $img = get_field('collection_image');
-                        $imgurl = wp_get_attachment_image_src($img, 'full');
-                        if($imgurl){ ?><img src="<? echo $imgurl[0]; ?>" alt="">
-                        <? } ?>
-                    </div>
-                </a>
-            </div>
-        <?php endwhile; // End of the loop. ?>
-    </div>
-    <div class="athena-pagination">
+                            <div class="collection-item-textbox">
+                                <h3>
+                                    <?php the_title(); ?>
+                                </h3>
+                                <p>
+                                 <?  
+                                 $txt = get_field('collection-univ-name');
+                                 if($txt){ ?><? echo $txt; ?>
+                                 <? } ?>
+                             </p>
+                         </div>
+                     </div>
+                 </a>
+             </div>
+         <?php endwhile; // End of the loop. ?>
+     </div>
+     <div class="athena-pagination">
         <?php echo paginate_links(); ?>
     </div>
 </div>
@@ -64,16 +66,4 @@ get_header(); ?>
 <?php get_footer(); ?>
 
 <style type="text/css">
-.collection-item {
-    border: 1px solid #00000040;
-    padding: 10px;
-    margin-bottom: 30px;
-    box-shadow: 1px 1px 1px;
-}
-.collection-box {
-    padding: 15px;
-}
-.collection-item-textbox h3,.collection-item-textbox p {
-    color: #505656;
-}
 </style>
