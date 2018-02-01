@@ -1,3 +1,22 @@
+.entry-title {
+    word-wrap: break-word;
+}
+.blog-box-wrapper,.collection-box {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 50% 50%;     
+}
+.meta-detail div:nth-child(3),.meta-detail span:nth-child(3) {
+    display: none;
+}
+#comments {
+    display: none;
+}
+.index-whole-wrapper,.aboutus-wrapper,.blog-wrapper,.member-wrapper,.futures-wrapper,.collection-wrapper,.contact-wrapper,.webdesign-wrapper,.promotionsupport-wrapper,.blog-wrapper {
+    width: 70%;
+    margin: 0 auto !important;
+}
+
 .content-explain p {
     padding: 0 20px 20px 20px;
     line-height: 25px;

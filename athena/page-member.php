@@ -11,7 +11,7 @@ get_header(); ?>
             <div class="member-title page-title">
                 <h1>MEMBER</h1>
             </div>  
-            <div class="page">
+            <div class="page member-contents">
                 <?php
                 $temp = $wp_query;
                 $wp_query = null;

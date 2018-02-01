@@ -942,8 +942,20 @@ ul.athena-nav > li.menu-item.menu-item-has-children > a:after{
 
     /*sumaho*/
     @media( max-width: 670px ) {
+        .blog-box-wrapper,.collection-box {
+            display: block;
+        }
+        .blog-box-wrapper {
+            padding: 0 20px;
+        }
+        .index-whole-wrapper,.aboutus-wrapper,.blog-wrapper,.member-wrapper,.futures-wrapper,.collection-wrapper,.contact-wrapper,.webdesign-wrapper,.promotionsupport-wrapper,.blog-wrapper {
+            width: 100%;
+        }
+        .member-contents {
+            width: 100%;
+        }
         .link-item {
-            
+
             width: 90%;
         }
         .before-article {
