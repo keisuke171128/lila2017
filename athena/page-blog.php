@@ -12,10 +12,14 @@ get_header(); ?>
                 <h1>Blog</h1>
             </div>
             <div class="content-explain">
-                <p>
-                    現役の大学生向けに、学生生活でためになる情報を発信しています。<br>
-                    サークル、バイト、ゼミ、就活...etc<br>
-                    学生生活のあらゆる場面で使える知識をちょいだし<br>
+                <div class="future-box contents-img future-blog-box"></div>
+                <div class="future-box-text">
+                </div>
+                <p class="future-text future-blog-text">
+                    現役大学生向けコンテンツでは、現役の大学生にとって有意義な情報をブログという形で提供しています。
+                    ようするに、大学生に役立つ情報を発信していこう！ってことです。
+                    こういったブログを僕たちが書いて、HPで更新していってます。
+                    特に、Macの便利な使い方や、レポートの効率良い書き方などwebデザインとプログラミングの知識を生かしたコンテンツを投下しています。
                 </p>
             </div>
             <div class="blog-box-wrapper">

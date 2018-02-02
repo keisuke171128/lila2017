@@ -1,3 +1,9 @@
+.future-item {
+    padding: 20px;
+}
+.future-item img {
+    margin-bottom: 20px;
+}
 .entry-title {
     word-wrap: break-word;
 }
@@ -125,6 +131,17 @@
         border-radius: 50px;
         width: 30%;
         margin: 0 auto;
+    }
+    .future-text {
+        padding: 20px 40px;
+        font-size: 16px;
+        line-height: 28px;
+    }
+    .future-blog-box {
+        margin-top: 0 !important;
+    }
+    .future-blog-text {
+        margin-top: 20px !important;
     }
     .whoareare-text {
         padding: 20px 40px;
